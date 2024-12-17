@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,html {
+        background-color: bisque;
+        margin: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .equation {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      img {
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>1D-Box Model</h1>
+    <img src="images.png" alt="1d box image" />
+    <h2>1D Box Model (Particle in a Box)</h2>
+    <p>
+      The 1D box model in quantum mechanics describes a particle (such as an
+      electron) confined within a rigid, one-dimensional box of length (𝐿). The
+      box has impenetrable walls, meaning the particle cannot exist outside it.
+      This model provides insights into energy quantization and wavefunctions in
+      confined systems.
+    </p>
+
+    <h2>Assumptions of the Model</h2>
+    <ol>
+      <li>The particle is free to move within the box along one dimension.</li>
+      <li>
+        The potential energy inside the box is V(x)=0, and it is infinite
+        (V(x)=∞) outside the box.
+      </li>
+      <li>
+        The particle cannot escape the box, leading to boundary conditions at
+        x=0 and x=L.
+      </li>
+      <li>
+        The particle exhibits wave-like behavior governed by the Schrödinger
+        equation.
+      </li>
+    </ol>
+
+    <h2>Schrödinger Equation</h2>
+    <p>The time-independent Schrödinger equation for a particle is:</p>
+    <p class="equation">
+      -ħ<sup>2</sup>/2m (d<sup>2</sup>ψ(x)/dx<sup>2</sup>) + V(x)ψ(x) = Eψ(x)
+    </p>
+    <p>Inside the 1D box where \( V(x) = 0 \), the equation simplifies to:</p>
+    <p class="equation">
+      d<sup>2</sup>ψ(x)/dx<sup>2</sup> + k<sup>2</sup>ψ(x) = 0
+    </p>
+
+    <h2>General Solution</h2>
+    <p>
+        Inside a one-dimensional box where the potential energy \( V(x) = 0 \), the Schrödinger equation simplifies to:
+    </p>
+    <p class="equation">
+        d<sup>2</sup>ψ(x)/dx<sup>2</sup> + k<sup>2</sup>ψ(x) = 0
+    </p>
+    <p>
+        The general solution of this second-order differential equation is:
+    </p>
+    <p class="equation">
+        ψ(x) = A sin(kx) + B cos(kx)
+    </p>
+    <p>
+        Here, \( A \) and \( B \) are constants to be determined using boundary conditions, and \( k \) is related to the energy \( E \) by:
+    </p>
+    <p class="equation">
+        k = √(2mE)/ħ
+    </p>
+
+    <h2>Boundary Conditions</h2>
+    <p>
+        For a particle in a 1D box of length \( L \), the boundary conditions are:
+    </p>
+    <div class="important">
+        ψ(0) = 0 and ψ(L) = 0
+    </div>
+    <p>
+        Applying these conditions to the general solution:
+    </p>
+    <p class="equation">
+        ψ(0) = A sin(0) + B cos(0) = B = 0
+    </p>
+    <p>
+        This means the solution simplifies to:
+    </p>
+    <p class="equation">
+        ψ(x) = A sin(kx)
+    </p>
+    <p>
+        Applying the second boundary condition \( ψ(L) = 0 \):
+    </p>
+    <p class="equation">
+        ψ(L) = A sin(kL) = 0
+    </p>
+    <p>
+        For \( A \neq 0 \), we must have \( sin(kL) = 0 \), which gives:
+    </p>
+    <p class="equation">
+        kL = nπ, where n = 1, 2, 3, ...
+    </p>
+    <p>
+        Therefore:
+    </p>
+    <p class="equation">
+        k = nπ/L
+    </p>
+
+    <h2>Quantized Energy Levels</h2>
+    <p>
+        Using the relation \( k = √(2mE)/ħ \) and substituting \( k = nπ/L \), the quantized energy levels of the particle are:
+    </p>
+    <p class="equation">
+        E<sub>n</sub> = (n²π²ħ²) / (2mL²), where n = 1, 2, 3, ...
+    </p>
+    <p>
+        The quantum number \( n \) represents the energy level of the particle, and the lowest energy level corresponds to \( n = 1 \).
+    </p>
+
+    <h2>Normalized Wavefunction</h2>
+    <p>
+        The normalized wavefunction \( ψ<sub>n</sub>(x) \) for the particle is:
+    </p>
+    <p class="equation">
+        ψ<sub>n</sub>(x) = √(2/L) sin(nπx/L), where n = 1, 2, 3, ...
+    </p>
+    <p>
+        The normalization ensures that the total probability of finding the particle inside the box is 1.
+    </p>
+    </br>
+  </body>
+</html>
